@@ -10,21 +10,21 @@ Output: A list of 2n disks where the first n disks are light and the next n disk
 ## Psuedocode for Alg 1: Lawnmower
 number of iterations = (ceileing of n) / 2  <br />
 for i = 0 to (number of iterations - 1) do  <br />
-  if i is even do  <br />
-    for j = 0 to length(list) - 1 do  <br />
-      if list[j] is not equal to list[j+1]  <br />
-        swap them  <br />
-       end if  <br />
-     end for  <br />
-  end if  <br />
+&emsp;  if i is even do  <br />
+&emsp;&emsp;    for j = 0 to length(list) - 1 do  <br />
+&emsp;&emsp;&emsp;     if list[j] is not equal to list[j+1]  <br />
+&emsp;&emsp;&emsp;&emsp;        swap them  <br />
+&emsp;&emsp;&emsp;       end if  <br />
+&emsp;&emsp;     end for  <br />
+&emsp;  end if  <br />
    
-  else  <br />
-    for j = (length of the list - 1) to 0 do  <br />
-      if (list[j] is not equal to list[j-1])  <br />
-        swap them  <br />
-      end if  <br />
-     end for  <br />
-   end else  <br />
+&emsp;  else  <br />
+&emsp;&emsp;    for j = (length of the list - 1) to 0 do  <br />
+&emsp;&emsp;&emsp;     if (list[j] is not equal to list[j-1])  <br />
+&emsp;&emsp;&emsp;&emsp;       swap them  <br />
+&emsp;&emsp;&emsp;     end if  <br />
+&emsp;&emsp;     end for  <br />
+&emsp;  end else  <br />
 end for  <br />
 
 # Step Count
@@ -34,11 +34,11 @@ end for  <br />
 ## Psuedocode for Alg 2
 number of iterations = n + 1  <br />
 for i = 0 to (# of iterations - 1) do  <br />
-  for j = 0 to length(list) - 1 do  <br />
-    if (list[j] not equal to list[j+1])  <br />
-      swap  <br />
-    end if  <br />
-  end for  <br />
+&emsp;  for j = 0 to length(list) - 1 do  <br />
+&emsp;&emsp;    if (list[j] not equal to list[j+1])  <br />
+&emsp;&emsp;&emsp;      swap  <br />
+&emsp;&emsp;    end if  <br />
+&emsp;  end for  <br />
 end for  <br />
 
 # Step Count
