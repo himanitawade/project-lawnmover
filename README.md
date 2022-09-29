@@ -27,11 +27,15 @@ for i = 0 to (number of iterations - 1) do  <br />
 &emsp;  end else  <br />
 end for  <br />
 
-# Step Count
+## Step Count
+S.C. = n/2 (1 + max(n+2, n+2)) <br />
+&emsp; = n/2 * (3 + n) <br />
+&emsp; = 3/2 * n + 1/2 n^2
 
-# Efficiency Class Using Limit Theorem
+## Efficiency Class Using Limit Theorem
 
-## Psuedocode for Alg 2
+
+# Psuedocode for Alg 2
 number of iterations = n + 1  <br />
 for i = 0 to (# of iterations - 1) do  <br />
 &emsp;  for j = 0 to length(list) - 1 do  <br />
@@ -41,4 +45,11 @@ for i = 0 to (# of iterations - 1) do  <br />
 &emsp;  end for  <br />
 end for  <br />
 
-# Step Count
+## Step Count
+S.C. = n+1 [2n -1 (1+1)] <br />
+&emsp; = n+1 [2(2n-1)] <br />
+&emsp; = n+1 [4n-2] <br />
+&emsp; = 4n^2 -2n + 4n -2 <br />
+&emsp; = 4n^2 + 2n -2 <br />
+
+## Efficiency Class Using Limit Theorem
