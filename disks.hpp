@@ -112,7 +112,12 @@ public:
   // Return true when this disk_state is fully sorted, with all light disks on
   // the left (low indices) and all dark disks on the right (high indices).
   bool is_sorted() const {
-      
+      int halfCount = total_count() / 2;
+      for (int i=0; i < total_count(); i++){
+          if (i < halfCount){
+              if(_colors[i] == DISK_DARK){ return false;}
+          }
+      }
       return true;
   }
 };
@@ -147,6 +152,13 @@ sorted_disks sort_alternate(const disk_state& before) {
     disk_state state = before;
 	int numOfSwap = 0;                                                                      //record # of step swap
 
+    for (int i = 0; i < state.light_count(); ++i){
+        for (int m = 0; m < state.total_count() - 1; ++m){
+            if (state.get(m) > state.get(m + 1)){
+                state.swap(m);
+                ++numOfSwap;
+            }
+        }
           }
   return sorted_disks(disk_state(state), numOfSwap);
 }
