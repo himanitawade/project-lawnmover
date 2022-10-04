@@ -144,18 +144,31 @@ public:
 
 // Algorithm that sorts disks using the alternate algorithm.
 sorted_disks sort_alternate(const disk_state& before) {
+    disk_state state = before;
 	int numOfSwap = 0;                                                                      //record # of step swap
- 
-          }
 
+          }
   return sorted_disks(disk_state(state), numOfSwap);
 }
 
 
 // Algorithm that sorts disks using the lawnmower algorithm.
 sorted_disks sort_lawnmower(const disk_state& before) {
-  	
+    disk_state state = before;
+    int numOfSwap = 0;
+    bool booleanFlag;
+    for (int i = 0; i < state.light_count(); ++i){
+        if (i % 2 == 0) {
+            booleanFlag = true;
+        } else {
+            booleanFlag = false;
+        }
+        for (int m = booleanFlag? 0 : state.total_count() - 2; m < state.total_count() - 1; booleanFlag? ++m : --m){
+            if (state.get(m) > state.get(m + 1)) {
+                state.swap(m);
+                ++numOfSwap;
+            }
+        }
 	  }
-
   return sorted_disks(disk_state(state), numOfSwap);
 }
