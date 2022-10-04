@@ -3,6 +3,9 @@
 Lori Cha
 Email: lcha@csu.fullerton.edu
 
+Nicholas Caro
+Email: nicholascaro@csu.fullerton.edu
+
 # The Alternating Disc Problem Definition
 Input: A positive n and a list of 2n disks of alternating colors light-dark.  <br />
 Output: A list of 2n disks where the first n disks are light and the next n disks are dark, and an integer m representing the number of swaps
